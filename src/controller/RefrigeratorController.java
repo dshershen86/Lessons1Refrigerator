@@ -19,7 +19,7 @@ public class RefrigeratorController implements RefrigeratorService {
     @Override
     public Refrigerator loadRefrigerator(String fileName){
 
-        List<String> content = null;
+        List<String> content;
         try {
             content = Files.readAllLines(Paths.get(fileName));
         } catch (IOException e) {
@@ -36,7 +36,7 @@ public class RefrigeratorController implements RefrigeratorService {
         for (int i = 0; i < refrigerator.getCount(); i++)
             for (int j = 0; j< refrigerator.getCount(); j++) {
                 try {
-                    refrigerator.setValue(Integer.parseInt(content.get(i + 1).substring(j, j+1))!=0?true:false, i, j);
+                    refrigerator.setValue(Integer.parseInt(content.get(i + 1).substring(j, j + 1)) != 0, i, j);
                 }catch (NumberFormatException e){
                     throw new NumberFormatException();
                 } catch (Exception e) {
