@@ -91,7 +91,7 @@ public class RefrigeratorController implements RefrigeratorService {
                     move = new Move();
                 else
                     move = (Move) m.clone();
-                Refrigerator resultRef= null;
+                Refrigerator resultRef;
                 try {
                     resultRef = change(tref,i,j);
                 } catch (CloneNotSupportedException e) {
@@ -119,7 +119,7 @@ public class RefrigeratorController implements RefrigeratorService {
     }
     @Override
     public Move play() throws CloneNotSupportedException {
-        this.moves = new ArrayList<Move>();
+        this.moves = new ArrayList<>();
         if(refrigeratorTrue==null){
             createrefrigeratorTrue(refrigerator.getCount());
         }
@@ -132,7 +132,7 @@ public class RefrigeratorController implements RefrigeratorService {
 
                 if(isWin(moves))
                     return returnLastMove(moves);
-            };
+            }
         return null;
     }
 }
