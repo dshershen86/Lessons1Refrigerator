@@ -1,11 +1,5 @@
 package model;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 public class Refrigerator implements Cloneable{
     private int count;
     private boolean[][] value;
@@ -19,11 +13,7 @@ public class Refrigerator implements Cloneable{
         return count;
     }
 
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-    public boolean[][] getValues() {
+     public boolean[][] getValues() {
         return value;
     }
     public boolean getValue(int row, int col) {

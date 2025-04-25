@@ -14,12 +14,6 @@ public class Move implements Cloneable {
     public int level;
     public boolean isWin;
 
-    public Move(int xpos, int ypos, int countMoves) {
-        this.countMoves = countMoves;
-        this.isWin = false;
-        this.posList = new ArrayList<>();
-    }
-
     public Move() {
 
         this.posList = new ArrayList<>();
