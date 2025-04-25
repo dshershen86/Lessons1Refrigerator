@@ -1,7 +1,7 @@
 package model;
 import java.util.Arrays;
 public class Refrigerator implements Cloneable{
-    private int count;
+    final private int count;
     private boolean[][] value;
 
     public Refrigerator(int count) {
