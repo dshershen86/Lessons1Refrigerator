@@ -45,6 +45,7 @@ public class Refrigerator implements Cloneable{
                 value[i][j] = this.value[i][j];
             }
         }
+
         ref.setValues(value);
         return ref;
     }
