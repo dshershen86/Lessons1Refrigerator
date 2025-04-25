@@ -72,7 +72,7 @@ public class RefrigeratorController implements RefrigeratorService {
     //BOF
     private List<Move> rPlay(Move m) throws CloneNotSupportedException {
         int countMoves=0;
-        List<Move>moves = new ArrayList<Move>();
+        List<Move>moves = new ArrayList<>();
         Refrigerator tref=refrigerator;
         if (m!=null){
             tref=m.refrigerator;
